@@ -5,8 +5,6 @@
     --main-color: rgb(103, 196, 103);
     --scnd-color: rgb(201, 250, 201);
 }
-}
-
 
 * {
     padding: 0;
@@ -43,7 +41,7 @@ h3 {
 
 .myinfo {
     background: var(--scnd-color);
-}
+    padding: 25px;
 
 }
 
@@ -51,16 +49,19 @@ h3 {
     display: flex;
     justify-content: space-around;
     overflow: auto;
+    padding: 25px;
 }
 
 .edu1 {
     flex: none;
     background: rgb(201, 250, 201);
+    padding: 25px;
 }
 
 .addedu {
     flex: none;
     background: var(--scnd-color);
+    padding: 25px;
 }
 
 .work {
@@ -71,8 +72,10 @@ h3 {
 
 .exp {
     background: var(--scnd-color);
+    padding: 25px;
 }
 
 .skill {
     background: var(--scnd-color);
+    padding: 25px;
 }

@@ -1,35 +1,21 @@
-const days = document.getElementById('days');
-const hours = document.getElementById('hours');
-const minutes = document.getElementById('minutes');
-const seconds = document.getElementById('seconds');
-const countdown = document.getElementById('countdown');
-const year = document.getElementById('year');
-const loading = document.getElementById('loading');
+const images = [
+    "img/fishing.png",
+    "img/reading.png",
+    "img/bike.png"
+]
 
-const currentYear = new Date().getFullYear();
+let currentSlide = 0;
 
-const newYearTime = new Date(`November 23 ${currentYear + 1} 00:00:00`);
-
-year.innerText = currentYear + 1;
-
-function updateCountdown() {
-  const currentTime = new Date();
-  const diff = newYearTime - currentTime;
-
-  const d = Math.floor(diff / 1000 / 60 / 60 / 24);
-  const h = Math.floor(diff / 1000 / 60 / 60) % 24;
-  const m = Math.floor(diff / 1000 / 60) % 60;
-  const s = Math.floor(diff / 1000) % 60;
-
-  days.innerHTML = d;
-  hours.innerHTML = h < 10 ? '0' + h : h;
-  minutes.innerHTML = m < 10 ? '0' + m : m;
-  seconds.innerHTML = s < 10 ? '0' + s : s;
+function showSlide () {
+    const carouselImage = document.querySelector('.hobbies img');
+    carouselImage.src = images[currentSlide];
 }
 
-setTimeout(() => {
-  loading.remove();
-  countdown.style.display = 'flex';
-}, 1000);
+function nextSlide () {
+    currentSlide++;
+    if (currentSlide >= images.length) currentSlide = 0;
+    showSlide ();
+}
 
-setInterval(updateCountdown, 1000);
+setInterval(nextSlide, 1000);
+

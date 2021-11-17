@@ -53,13 +53,11 @@ h3 {
 }
 
 .edu1 {
-    flex: none;
     background: rgb(201, 250, 201);
     padding: 25px;
 }
 
 .addedu {
-    flex: none;
     background: var(--scnd-color);
     padding: 25px;
 }
@@ -78,4 +76,30 @@ h3 {
 .skill {
     background: var(--scnd-color);
     padding: 25px;
+}
+
+@media (min-width 600px) {
+    .fstinfo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+}
+
+@media (min-width 600px) {
+    .edu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+}
+@media (min-width 600px) {
+    .work {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+
 }
